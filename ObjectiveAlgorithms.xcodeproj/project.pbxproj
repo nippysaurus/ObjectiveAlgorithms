@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4CBE12551299D85D003A8A56 /* NIPLevenshteinDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE12541299D85D003A8A56 /* NIPLevenshteinDistance.m */; };
 		4CBE12A6129BE6E1003A8A56 /* NIPBubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE12A5129BE6E1003A8A56 /* NIPBubbleSort.m */; };
-		4CBE12EF129E857C003A8A56 /* SampleSortableData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE12EE129E857C003A8A56 /* SampleSortableData.m */; };
 		8DD76F9A0486AA7600D96B5E /* ObjectiveAlgorithms.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* ObjectiveAlgorithms.m */; settings = {ATTRIBUTES = (); }; };
 		8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB779EFE84155DC02AAC07 /* Foundation.framework */; };
 		8DD76F9F0486AA7600D96B5E /* ObjectiveAlgorithms.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859EA3029092ED04C91782 /* ObjectiveAlgorithms.1 */; };
@@ -36,8 +35,6 @@
 		4CBE12541299D85D003A8A56 /* NIPLevenshteinDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIPLevenshteinDistance.m; sourceTree = "<group>"; };
 		4CBE12A4129BE6E1003A8A56 /* NIPBubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIPBubbleSort.h; sourceTree = "<group>"; };
 		4CBE12A5129BE6E1003A8A56 /* NIPBubbleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIPBubbleSort.m; sourceTree = "<group>"; };
-		4CBE12ED129E857C003A8A56 /* SampleSortableData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleSortableData.h; sourceTree = "<group>"; };
-		4CBE12EE129E857C003A8A56 /* SampleSortableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleSortableData.m; sourceTree = "<group>"; };
 		8DD76FA10486AA7600D96B5E /* ObjectiveAlgorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectiveAlgorithms; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6859EA3029092ED04C91782 /* ObjectiveAlgorithms.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = ObjectiveAlgorithms.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,8 +111,6 @@
 			children = (
 				4CBE12A4129BE6E1003A8A56 /* NIPBubbleSort.h */,
 				4CBE12A5129BE6E1003A8A56 /* NIPBubbleSort.m */,
-				4CBE12ED129E857C003A8A56 /* SampleSortableData.h */,
-				4CBE12EE129E857C003A8A56 /* SampleSortableData.m */,
 			);
 			name = BubbleSort;
 			sourceTree = "<group>";
@@ -181,7 +176,6 @@
 				8DD76F9A0486AA7600D96B5E /* ObjectiveAlgorithms.m in Sources */,
 				4CBE12551299D85D003A8A56 /* NIPLevenshteinDistance.m in Sources */,
 				4CBE12A6129BE6E1003A8A56 /* NIPBubbleSort.m in Sources */,
-				4CBE12EF129E857C003A8A56 /* SampleSortableData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

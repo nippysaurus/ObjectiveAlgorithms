@@ -1,5 +1,13 @@
 #import <Foundation/Foundation.h>
 #import "NIPLevenshteinDistance.h"
+#import "NIPBubbleSort.h"
+
+//
+// LINKS:
+//
+// http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Miscellaneous/Foundation_DataTypes/Reference/reference.html
+// http://stackoverflow.com/questions/4118285/nscomparisonresult-and-nscomparator-what-are-they
+//
 
 int main (int argc, const char * argv[])
 {
@@ -7,7 +15,19 @@ int main (int argc, const char * argv[])
 	
 	
 	
+//	NSMutableArray* ma = [[NSMutableArray alloc] init];
 	
+//	[ma addObject:@"c"];
+//	[ma addObject:@"b"];
+//	[ma addObject:@"d"];
+//	[ma addObject:@"a"];
+//	
+//	[ma sortUsingComparator:<#(NSComparator)cmptr#>
+//	
+//	for (NSString* b in ma)
+//		NSLog(@"[%@]", b);
+//	
+//	return 0;
 	
 	
 	
@@ -35,7 +55,7 @@ int main (int argc, const char * argv[])
 	
 	printf("WHICH ALGORITHM WOULD YOU LIKE TO TEST?\n\n");
 	printf(" 1. Levenshtein Distance\n");
-	printf(" 2. something else\n");
+	printf(" 2. Bubble Sort\n");
 	printf(" 3. something else\n");
 	printf(" 4. something else\n");
 	
@@ -43,8 +63,17 @@ int main (int argc, const char * argv[])
 	
 	scanf("%d", &choice);
 
-	//printf("you chose %d", choice);
-	[NIPLevenshteinDistance test];
+	if (choice == 1)
+	{
+		[NIPLevenshteinDistance test];
+		return 0;
+	}
+
+	if (choice == 2)
+	{
+		[NIPBubbleSort test];
+		return 0;
+	}
 	
     [pool drain];
     return 0;
