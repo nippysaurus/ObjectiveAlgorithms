@@ -27,25 +27,16 @@
 		{
 			id a = [working objectAtIndex:i];
 			id b = [working objectAtIndex:i+1];
-			
-			[working removeObjectAtIndex:i];
-			[working removeObjectAtIndex:i];
 
 			NSComparisonResult diff = comparator(a, b);
 
 			if (diff > 0)
 			{
-				// inserting in this order will reverse them
-				[working insertObject:a atIndex:i];
+				// reverse items
+				[working removeObjectAtIndex:i+1];
 				[working insertObject:b atIndex:i];
 				
 				swapped = YES;
-			}
-			else
-			{
-				// inserting in this order will not reverse them
-				[working insertObject:b atIndex:i];
-				[working insertObject:a atIndex:i];
 			}
 
 		}
