@@ -10,7 +10,6 @@
 
 @implementation NIPBubbleSort
 
-//+(NSArray*)sortItems:(NSArray*)items;
 +(NSArray*)sortItems:(NSArray*)items usingComparator:(NSComparator)comparator
 {
 	if ([items count] == 1)
@@ -73,14 +72,12 @@
 		return [a caseInsensitiveCompare:b];
 	};
 
-	NSArray* words = [[NSString stringWithCString:buffer] componentsSeparatedByString:@"|"];
+	NSArray* words = [[NSString stringWithUTF8String:buffer] componentsSeparatedByString:@"|"];
 	
 	NSArray* sorted = [NIPBubbleSort sortItems:words usingComparator:compare];
 
 	for (NSString* word in sorted)
-		printf("%s\n", [word cString]);
-	
-	//printf("distance (%s,%s) = %i", first, second, [distance intValue]);
+		printf("%s\n", [word UTF8String]);
 }
 
 @end

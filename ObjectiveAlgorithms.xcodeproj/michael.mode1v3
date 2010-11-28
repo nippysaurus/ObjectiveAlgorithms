@@ -330,15 +330,15 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4C98160C12A26E5400414656</string>
+										<string>4C98162112A2714700414656</string>
 										<key>history</key>
 										<array>
 											<string>4CBE130912A0B072003A8A56</string>
 											<string>4C98152C12A0E91900414656</string>
 											<string>4C98152D12A0E91900414656</string>
-											<string>4C98158F12A1383400414656</string>
 											<string>4C98159B12A1392000414656</string>
-											<string>4C98160B12A26E5400414656</string>
+											<string>4C98161F12A2714700414656</string>
+											<string>4C98162012A2714700414656</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -565,7 +565,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>NIPBubbleSort.m</string>
+								<string>NIPBubbleSort.h</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
