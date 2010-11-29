@@ -12,14 +12,15 @@
 
 +(NSArray*)sortItems:(NSArray*)items usingComparator:(NSComparator)comparator
 {
+   // this algorithm will not work with one item (im not even sure if it will work with two items)
 	if ([items count] == 1)
 		return items;
 	
+   // array where items will be swapped
 	NSMutableArray* working = [[NSMutableArray alloc] initWithArray:items];
 	
 	BOOL swapped = NO;
 	
-	// actual algorithm
 	do {
 		swapped = NO;
 
@@ -32,6 +33,9 @@
 
 			if (diff > 0)
 			{
+            // use this instead?
+            // -[NSMutableArray replaceObjectAtIndex:withObject:]
+
 				// reverse items
 				[working removeObjectAtIndex:i+1];
 				[working insertObject:b atIndex:i];
@@ -59,7 +63,8 @@
 
 	NSComparisonResult (^compare)(id, id) = ^NSComparisonResult(id a, id b)
 	{
-		// standard string comparison
+		// standard Cocoa string comparison
+		// http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html%23//apple_ref/occ/instm/NSString/caseInsensitiveCompare:
 		return [a caseInsensitiveCompare:b];
 	};
 
