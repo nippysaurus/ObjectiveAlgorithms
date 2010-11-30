@@ -1,0 +1,13 @@
+I am new to GIT so this is to help me any anyone else who is in the same situation.
+
+These are just command helpers for interacting with the github repo, not checking code into your local repo.
+
+"PULL" changes from GitHub: git pull origin master
+
+"Push" changes to GitHub: git push origin master
+
+"Clone" a repo from GitHub: git clone <url from project page>
+
+The url to clone can be found on the project page, and look something like this:
+
+git@github.com:nippysaurus/ObjectiveAlgorithms.git
