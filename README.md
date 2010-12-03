@@ -23,7 +23,7 @@ The xcode project will compile to a console application. Running the console app
 License
 =======
 
-I will release this code under the ["New BSD Licence"][http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29] as detailed below.
+I will release this code under the ["New BSD Licence"](http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29 "New BSD License | Wikipedia") as detailed below.
 
 > Copyright (c) 2010-2011, Nippysaurus
 > All rights reserved.
