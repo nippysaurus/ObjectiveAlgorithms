@@ -1,4 +1,5 @@
-# About
+About
+=====
 
 ObjectiveAlgorithms is a personal project to implement various common algorithms using a combination of C (for speed) and Objective-C.
 
@@ -6,24 +7,27 @@ Since algorithms are usually better if they have been through some optimisation 
 
 The code is an Xcode project which can be compiled into a console application (.app). The console application provides tester application which allow each algorithm to be tested.
 
-# Algorithms
+Algorithms
+==========
 
 The following algorithms have been implemented so far:
 
  * Levenshtein Distance
  * Bubble Sort
 
-# Usage
+Usage
+=====
 
 The xcode project will compile to a console application. Running the console application will present a menu to select an algorithm to test.
 
-# License
+License
+=======
 
-I will release this code under the "New BSD Licence" as detailed below.
+I will release this code under the ["New BSD Licence"][http://en.wikipedia.org/wiki/BSD_licenses#3-clause_license_.28.22New_BSD_License.22_or_.22Modified_BSD_License.22.29] as detailed below.
 
-Copyright (c) 2010-2011, Nippysaurus
-All rights reserved.
-
+> Copyright (c) 2010-2011, Nippysaurus
+> All rights reserved.
+> 
 > Redistribution and use in source and binary forms, with or without
 > modification, are permitted provided that the following conditions are met:
 >     * Redistributions of source code must retain the above copyright
