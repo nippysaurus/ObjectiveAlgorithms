@@ -1,6 +1,7 @@
 #import <Foundation/Foundation.h>
 #import "NIPLevenshteinDistance.h"
 #import "NIPBubbleSort.h"
+#import "NIPFisherYatesShuffle.h"
 
 //
 // LINKS:
@@ -56,7 +57,7 @@ int main (int argc, const char * argv[])
 	printf("WHICH ALGORITHM WOULD YOU LIKE TO TEST?\n\n");
 	printf(" 1. Levenshtein Distance\n");
 	printf(" 2. Bubble Sort\n");
-	printf(" 3. something else\n");
+	printf(" 3. FISHER YATES SHUFFLE\n");
 	printf(" 4. something else\n");
 	
 	int choice;
@@ -72,6 +73,12 @@ int main (int argc, const char * argv[])
 	if (choice == 2)
 	{
 		[NIPBubbleSort test];
+		return 0;
+	}
+
+	if (choice == 3)
+	{
+		[NIPFisherYatesShuffle test];
 		return 0;
 	}
 	
