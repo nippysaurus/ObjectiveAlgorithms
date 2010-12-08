@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4C2491F112AE4DAC00E861BE /* NIPMandlebrot.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2491F012AE4DAC00E861BE /* NIPMandlebrot.m */; };
+		4C24929912AE5C3B00E861BE /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C24929812AE5C3B00E861BE /* AppKit.framework */; };
 		4C990CB212A93A89002EFF77 /* NIPInsertionSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C990CB112A93A89002EFF77 /* NIPInsertionSort.m */; };
 		4C990CB512A93B0E002EFF77 /* NIPFisherYatesShuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C990CB412A93B0E002EFF77 /* NIPFisherYatesShuffle.m */; };
 		4C990CE712A94132002EFF77 /* NIPBogoSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C990CE612A94132002EFF77 /* NIPBogoSort.m */; };
@@ -37,6 +38,7 @@
 		32A70AAB03705E1F00C91783 /* ObjectiveAlgorithms_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectiveAlgorithms_Prefix.pch; sourceTree = "<group>"; };
 		4C2491EF12AE4DAC00E861BE /* NIPMandlebrot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIPMandlebrot.h; sourceTree = "<group>"; };
 		4C2491F012AE4DAC00E861BE /* NIPMandlebrot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIPMandlebrot.m; sourceTree = "<group>"; };
+		4C24929812AE5C3B00E861BE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4C990CB012A93A89002EFF77 /* NIPInsertionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIPInsertionSort.h; sourceTree = "<group>"; };
 		4C990CB112A93A89002EFF77 /* NIPInsertionSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIPInsertionSort.m; sourceTree = "<group>"; };
 		4C990CB312A93B0E002EFF77 /* NIPFisherYatesShuffle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIPFisherYatesShuffle.h; sourceTree = "<group>"; };
@@ -57,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD76F9C0486AA7600D96B5E /* Foundation.framework in Frameworks */,
+				4C24929912AE5C3B00E861BE /* AppKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				08FB779EFE84155DC02AAC07 /* Foundation.framework */,
+				4C24929812AE5C3B00E861BE /* AppKit.framework */,
 			);
 			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";

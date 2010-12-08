@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import <AppKit/NSBitmapImageRep.h>
+#import <Cocoa/Cocoa.h>
 
 @interface NIPMandlebrot : NSObject {
 
 }
-
-//+(NSArray*)shuffleData:(NSArray*)data;
-//+(NSArray*)shuffleData:(NSArray*)data;
 
 +(void)createSetWithWidth:(int)width Height:(int)height;
 

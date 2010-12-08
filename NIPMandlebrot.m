@@ -12,6 +12,20 @@
 
 +(void)createSetWithWidth:(int)width Height:(int)height
 {
+	NSBitmapImageRep* image = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL
+																	  pixelsWide:width 
+																	  pixelsHigh:height
+																   bitsPerSample:8
+																 samplesPerPixel:4
+																		hasAlpha:YES
+																		isPlanar:NO
+																  colorSpaceName:NSDeviceRGBColorSpace
+																	 bytesPerRow:0
+																	bitsPerPixel:0];
+	
+	[NSGraphicsContext saveGraphicsState];
+	[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:image]];
+	
 	for (int i = 0; i < height; ++i)
 	{
 		NSMutableArray *line = [[NSMutableArray alloc] init];
@@ -37,14 +51,34 @@
 			double progress = ((double)9 / (double)max_iteration) * (double)iteration;
 			int progress_floor = floor(progress);
 			NSString *pixel = [NSString stringWithFormat:@"%i", progress_floor];
-
 			[line addObject:pixel];
+			
+   		    NSColor *color = [NSColor colorWithDeviceRed:1.0
+												   green:1.0
+													blue:1.0
+												   alpha:1.0];
+			
+//			[color set];
+			
+			[image setColor:color
+						atX:x
+						  y:y];
+			
+			
 		}
 		
 		for (NSString* s in line)
 			printf("%s", [s UTF8String]);
 		printf("\n");
 	}
+	
+	//[[NSColor colorWithCalibratedRed:1 green:0 blue:0 alpha:1] set];
+	//[[NSBezierPath bezierPathWithRect:NSMakeRect(0, 0, 396, 396)] fill];
+	
+	[NSGraphicsContext restoreGraphicsState];
+	
+	NSData* TIFFData = [image TIFFRepresentation];
+	[TIFFData writeToFile:@"/Users/michael/Code/ObjectiveAlgorithms/temp.tiff" atomically:YES];
 }
 
 +(void)test
