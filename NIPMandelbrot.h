@@ -7,16 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import <AppKit/NSBitmapImageRep.h>
 #import <Cocoa/Cocoa.h>
 
-@interface NIPMandlebrot : NSObject {
+@interface NIPMandelbrot : NSObject {
 
 }
 
-+(void)createSetWithWidth:(int)width Height:(int)height;
-
-//+(void)createSetWithWidth:(int)width Height:(int)height Thing:(void^(int, int, int, int))thing;
++(void)createSetWithWidth:(int)width Height:(int)height Thing:(void(^)(int, int, int, int))thing;
 
 +(void)test;
 

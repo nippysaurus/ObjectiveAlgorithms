@@ -2,7 +2,7 @@
 #import "NIPLevenshteinDistance.h"
 #import "NIPBubbleSort.h"
 #import "NIPFisherYatesShuffle.h"
-#import "NIPMandlebrot.h"
+#import "NIPMandelbrot.h"
 
 //
 // LINKS:
@@ -45,7 +45,7 @@ int main (int argc, const char * argv[])
 
 	if (choice == 4)
 	{
-		[NIPMandlebrot test];
+		[NIPMandelbrot test];
 		return 0;
 	}
 	
