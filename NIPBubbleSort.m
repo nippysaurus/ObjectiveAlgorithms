@@ -60,7 +60,7 @@
 	
 	char buffer[256];
 	scanf("%256s", buffer);
-
+	
 	NSComparisonResult (^compare)(id, id) = ^NSComparisonResult(id a, id b)
 	{
 		// standard Cocoa string comparison

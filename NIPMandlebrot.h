@@ -16,6 +16,8 @@
 
 +(void)createSetWithWidth:(int)width Height:(int)height;
 
+//+(void)createSetWithWidth:(int)width Height:(int)height Thing:(void^(int, int, int, int))thing;
+
 +(void)test;
 
 @end

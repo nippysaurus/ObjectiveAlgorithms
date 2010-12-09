@@ -23,12 +23,8 @@
 																	 bytesPerRow:0
 																	bitsPerPixel:0];
 	
-	[NSGraphicsContext saveGraphicsState];
-	[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:image]];
-	
 	for (int i = 0; i < height; ++i)
 	{
-		NSMutableArray *line = [[NSMutableArray alloc] init];
 		for (int j = 0; j < width; ++j)
 		{
 			double x0 = ((4.0f * (i - (height / 2))) / (height)) - 1.0f;
@@ -47,43 +43,43 @@
 				iteration += 1;
 			}
 			
-			// 0 .. 9
-			double progress = ((double)9 / (double)max_iteration) * (double)iteration;
-			int progress_floor = floor(progress);
-			NSString *pixel = [NSString stringWithFormat:@"%i", progress_floor];
-			[line addObject:pixel];
+			double progress_b = ((double)1 / (double)max_iteration) * (double)iteration;
 			
-   		    NSColor *color = [NSColor colorWithDeviceRed:1.0
+   		    NSColor *color = [NSColor colorWithDeviceRed:progress_b
 												   green:1.0
-													blue:1.0
+													blue:progress_b
 												   alpha:1.0];
 			
-//			[color set];
-			
 			[image setColor:color
-						atX:x
-						  y:y];
+						atX:j
+						  y:i];
 			
 			
 		}
 		
-		for (NSString* s in line)
-			printf("%s", [s UTF8String]);
-		printf("\n");
 	}
-	
-	//[[NSColor colorWithCalibratedRed:1 green:0 blue:0 alpha:1] set];
-	//[[NSBezierPath bezierPathWithRect:NSMakeRect(0, 0, 396, 396)] fill];
-	
-	[NSGraphicsContext restoreGraphicsState];
 	
 	NSData* TIFFData = [image TIFFRepresentation];
 	[TIFFData writeToFile:@"/Users/michael/Code/ObjectiveAlgorithms/temp.tiff" atomically:YES];
 }
 
+//+(void)createSetWithWidth:(int)width Height:(int)height Thing:(void(int, int, int, int))thing
+//{
+//	//
+//}
+
 +(void)test
 {
-	[NIPMandlebrot createSetWithWidth:60 Height:40];
+	[NIPMandlebrot createSetWithWidth:500 Height:500];
+	
+//	// This function (block?) will get called each time a point of the mandlebrot is calculated.
+//	void (^mandlebrot_point_calculated)(int, int, int, int) = ^void(int x, int y, int iterations, int max_iterations)
+//	{
+//		//
+//		return;
+//	};
+//	
+//	[NIPMandlebrot createSetWithWidth:60 Height:40 Thing:mandlebrot_point_calculated];
 }
 
 @end
