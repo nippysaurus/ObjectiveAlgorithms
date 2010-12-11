@@ -280,7 +280,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>5</integer>
+									<integer>4</integer>
 									<integer>3</integer>
 									<integer>2</integer>
 									<integer>1</integer>
@@ -325,7 +325,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ObjectiveAlgorithms.m</string>
+								<string>NIPMandelbrot.h</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -333,11 +333,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ObjectiveAlgorithms.m</string>
+										<string>NIPMandelbrot.h</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>4C24943A12B10AD600E861BE</string>
+										<string>4C24955112B2561D00E861BE</string>
 										<key>history</key>
 										<array>
 											<string>4C98152C12A0E91900414656</string>
@@ -351,9 +351,9 @@
 											<string>4C24931212B03D8200E861BE</string>
 											<string>4C24931312B03D8200E861BE</string>
 											<string>4C24931412B03D8200E861BE</string>
-											<string>4C24943712B10AD600E861BE</string>
-											<string>4C24943812B10AD600E861BE</string>
-											<string>4C24943912B10AD600E861BE</string>
+											<string>4C24943B12B10D3500E861BE</string>
+											<string>4C24954F12B2561D00E861BE</string>
+											<string>4C24955012B2561D00E861BE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -554,8 +554,8 @@
 		<string>4C24922F12AE513200E861BE</string>
 		<string>4C24923012AE513200E861BE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>4CBE12791299DB9A003A8A56</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>4CBE12791299DB9A003A8A56</string>
 		<string>/Users/michael/Code/ObjectiveAlgorithms/ObjectiveAlgorithms.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
@@ -940,7 +940,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

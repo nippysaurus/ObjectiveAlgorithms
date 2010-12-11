@@ -11,17 +11,22 @@
 @implementation NIPMandelbrot
 
 +(void)createSetWithWidth:(int)width Height:(int)height Thing:(void(^)(int, int, int, int))thing
-{	
-	for (int i = 0; i < height; ++i)
-		for (int j = 0; j < width; ++j)
+{
+	double xmin = -1;
+	double xmax = 0;
+	double ymin = -1;
+	double ymax = 0;
+
+	for (int i = 0; i < width; ++i)
+		for (int j = 0; j < height; ++j)
 		{
-			double x0 = ((4.0f * (i - (height / 2))) / (height)) - 0.0f;
-			double y0 = ((4.0f * (j - (width / 2))) / (width)) + 0.0f;
+			double x0 = (((xmax - xmin) / width) * i) + xmin;
+			double y0 = (((ymax - ymin) / height) * j) + ymin;
 			double x = 0.0f;
 			double y = 0.0f;
 			
 			int iteration = 0;
-			int max_iteration = 15;
+			int max_iteration = 150;
 			
 			while ((((x * x) + (y * y)) <= 4.0f) && (iteration < max_iteration))
 			{
@@ -31,14 +36,14 @@
 				iteration += 1;
 			}
 			
-			thing(j, i, iteration, max_iteration);
+			thing(i, j, iteration, max_iteration);
 		}
 }
 
 +(void)test
 {
-	int imageWidth = 500;
-	int imageHeight = 500;
+	int imageWidth = 640;
+	int imageHeight = 960;
 	
 	NSBitmapImageRep* image = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL
 																	  pixelsWide:imageWidth 
