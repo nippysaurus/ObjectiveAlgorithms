@@ -14,4 +14,8 @@
 	
 }
 
++(NSArray*)sortItems:(NSArray*)items usingComparator:(NSComparator)comparator;
+
++(void)test;
+
 @end

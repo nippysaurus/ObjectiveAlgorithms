@@ -33,8 +33,8 @@
 
 			if (diff > 0)
 			{
-            // use this instead?
-            // -[NSMutableArray replaceObjectAtIndex:withObject:]
+				// use this instead?
+				// -[NSMutableArray replaceObjectAtIndex:withObject:]
 
 				// reverse items
 				[working removeObjectAtIndex:i+1];

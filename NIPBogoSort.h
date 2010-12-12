@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NIPFisherYatesShuffle.h"
 
 @interface NIPBogoSort : NSObject {
 
 }
 
-//+(NSArray*)shuffleData:(NSArray*)data;
-+(NSArray*)shuffleData:(NSArray*)data;
++(NSArray*)sortItems:(NSArray*)items usingComparator:(NSComparator)comparator;
 
 +(void)test;
 

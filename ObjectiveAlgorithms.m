@@ -3,6 +3,8 @@
 #import "NIPBubbleSort.h"
 #import "NIPFisherYatesShuffle.h"
 #import "NIPMandelbrot.h"
+#import "NIPInsertionSort.h"
+#import "NIPBogoSort.h"
 
 //
 // LINKS:
@@ -18,8 +20,10 @@ int main (int argc, const char * argv[])
 	printf("WHICH ALGORITHM WOULD YOU LIKE TO TEST?\n\n");
 	printf(" 1. Levenshtein Distance\n");
 	printf(" 2. Bubble Sort\n");
-	printf(" 3. FISHER YATES SHUFFLE\n");
-	printf(" 4. MANDLEBROT SET\n");
+	printf(" 3. Fisher Yates Shuffle\n");
+	printf(" 4. Mandelbrot Set\n");
+	printf(" 5. Insertion Sort\n");
+	printf(" 6. Bogo Sort\n");
 
 	int choice;
 	
@@ -46,6 +50,18 @@ int main (int argc, const char * argv[])
 	if (choice == 4)
 	{
 		[NIPMandelbrot test];
+		return 0;
+	}
+
+	if (choice == 5)
+	{
+		[NIPInsertionSort test];
+		return 0;
+	}
+	
+	if (choice == 6)
+	{
+		[NIPBogoSort test];
 		return 0;
 	}
 	
