@@ -31,7 +31,13 @@
          {
    //             if A[j] > value then
    //             begin
+            // swap items
+            [items removeObjectAtIndex:j+1];
+            [items insertObject:compareTo atIndex:j+1];
    //                 A[j + 1] := A[j];
+            j = j-1;
+            if (j < 0)
+               done = YES;
    //                 j := j - 1;
    //                 if j < 0 then
    //                     done := true;
