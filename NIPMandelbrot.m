@@ -42,8 +42,11 @@
 
 +(void)test
 {
+   printf("MANDELBROT\n");
+
 	int imageWidth = 640;
 	int imageHeight = 960;
+   NSString *filename = @"/Users/michael/Code/ObjectiveAlgorithms/temp.tiff";
 	
 	NSBitmapImageRep* image = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL
 																	  pixelsWide:imageWidth 
@@ -72,7 +75,7 @@
 	[NIPMandelbrot createSetWithWidth:imageWidth Height:imageHeight Thing:mandlebrot_point_calculated];
 	
 	NSData* TIFFData = [image TIFFRepresentation];
-	[TIFFData writeToFile:@"/Users/michael/Code/ObjectiveAlgorithms/temp.tiff" atomically:YES];
+	[TIFFData writeToFile:filename atomically:YES];
 }
 
 @end
