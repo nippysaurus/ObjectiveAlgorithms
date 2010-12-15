@@ -15,56 +15,58 @@
 
 int main (int argc, const char * argv[])
 {
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+
+	printf("===================\n");
+	printf("ObjectiveAlgorithms\n");
+	printf("===================\n\n");
+
+	printf("This is a tester application which allows you to drive each of the algorithms from the command line. I have also included some functionality which might be useful to someone who does not know which sorting algorithm to use. Please make your selection from the menu items below.\n\n");
 	
-	printf("WHICH ALGORITHM WOULD YOU LIKE TO TEST?\n\n");
-	printf(" 1. Levenshtein Distance\n");
-	printf(" 2. Bubble Sort\n");
-	printf(" 3. Fisher Yates Shuffle\n");
-	printf(" 4. Mandelbrot Set\n");
-	printf(" 5. Insertion Sort\n");
-	printf(" 6. Bogo Sort\n");
+	printf("HELPERS\n\n");
+	printf(" [a] Sorting Algorithms\n");
+
+	printf("ALGORITHMS\n\n");
+	printf(" [1] Levenshtein Distance\n");
+	printf(" [2] Bubble Sort\n");
+	printf(" [3] Fisher Yates Shuffle\n");
+	printf(" [4] Mandelbrot Set\n");
+	printf(" [5] Insertion Sort\n");
+	printf(" [6] Bogo Sort\n");
 
 	int choice;
-	
 	scanf("%d", &choice);
 
-	if (choice == 1)
+	switch (choice)
 	{
-		[NIPLevenshteinDistance test];
-		return 0;
-	}
-
-	if (choice == 2)
-	{
-		[NIPBubbleSort test];
-		return 0;
-	}
-
-	if (choice == 3)
-	{
-		[NIPFisherYatesShuffle test];
-		return 0;
-	}
-
-	if (choice == 4)
-	{
-		[NIPMandelbrot test];
-		return 0;
-	}
-
-	if (choice == 5)
-	{
-		[NIPInsertionSort test];
-		return 0;
-	}
+		case "a":
+			// TODO create a function for this space. i'm not even sure where the code will be.
+			break;
+		case "1":
+			[NIPLevenshteinDistance test];
+			break;
+		case "2":
+			[NIPBubbleSort test];
+			break;
+		case "3":
+			[NIPFisherYatesShuffle test];
+			break;
+		case "4":
+			[NIPMandelbrot test];
+			break;
+		case "5":
+			[NIPInsertionSort test];
+			break;
+		case "6":
+			[NIPBogoSort test];
+			break;
+		default:
+			// if the user makes an invlaid sepection, write a warning
+			// message and exit the application. they can run it again
+			// and make a more informed decision.
+			break;
+	};
 	
-	if (choice == 6)
-	{
-		[NIPBogoSort test];
-		return 0;
-	}
-	
-    [pool drain];
-    return 0;
+	[pool drain];
+	return 0;
 }
