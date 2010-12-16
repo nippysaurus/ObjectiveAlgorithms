@@ -12,48 +12,34 @@
 
 +(NSArray*)sortItems:(NSArray*)items usingComparator:(NSComparator)comparator
 {
-   // { This procedure sorts in ascending order. }
-   //     for i := 1 to length[A]-1 do
-   foreach (int i = 1 ; i < [items count] ; ++i)
-   {
-      id value = [items objectAtIndex: i];
-   //         value := A[i];
-      id j = i - 1;
-   //         j := i - 1;
-      bool done = NO;
-   //         done := false;
-      while (done == NO)
-      {
-   //         repeat
-   //             { To sort in descending order simply reverse the operator i.e. A[j] < value }
-         id compareTo = [items objectAtIndex:j];
-         if (comparator(compareTo, value) == NSBigger)
-         {
-   //             if A[j] > value then
-   //             begin
-            // swap items
-            [items removeObjectAtIndex:j+1];
-            [items insertObject:compareTo atIndex:j+1];
-   //                 A[j + 1] := A[j];
-            j = j-1;
-            if (j < 0)
-               done = YES;
-   //                 j := j - 1;
-   //                 if j < 0 then
-   //                     done := true;
-   //             end
-         }
-         else
-         {
-            done = YES;
-         }
-   //             else
-   //                 done := true;
-   //         until done;
-      }
-      [items setObject:value forIndex:j+1];
-   //         A[j + 1] := value;
-   }
+	if ([items count] == 1)
+		return items;
+	
+	NSMutableArray *data = [NSMutableArray arrayWithArray:items];;
+	for (int i = 1 ; i < [data count] ; ++i)
+	{
+		id value = [data objectAtIndex: i];
+		int j = i - 1;
+		bool done = NO;
+		while (done == NO)
+		{
+			id compareTo = [data objectAtIndex:j];
+			NSComparisonResult diff = comparator(compareTo, value);
+			if (diff > 0)
+			{
+				[data replaceObjectAtIndex:j+1 withObject:compareTo];
+				j = j-1;
+				if (j < 0)
+					done = YES;
+			}
+			else
+			{
+				done = YES;
+			}
+		}
+		[data replaceObjectAtIndex:j+1 withObject:value];
+	}
+	return [NSArray arrayWithArray:data];
 }
 
 +(void)test
