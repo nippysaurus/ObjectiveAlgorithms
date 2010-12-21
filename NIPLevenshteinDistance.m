@@ -79,25 +79,18 @@
 
 +(void)test
 {
-	printf("LEVENSHTEIN DISTANCE\n");
-	printf("enter first word: ");
+	printf("LEVENSHTEIN DISTANCE (algorithm)\n");
 	
-	char first[256];
 	
-	scanf("%256s", first);
+	NSString *a = [Helpers getStringWithPrompt:@"enter first word"];
+	NSString *b = [Helpers getStringWithPrompt:@"enter second word"];
 
-	printf("enter second word: ");
+	NSNumber* distance = [self calculateDistanceBetween:a and:b];
 	
-	char second[256];
+	char* c_a = (char*)[a cStringUsingEncoding:NSUTF8StringEncoding];
+	char* c_b = (char*)[b cStringUsingEncoding:NSUTF8StringEncoding];
 	
-	scanf("%256s", second);
-
-	NSString* wjbf = [NSString stringWithCString:first];
-	NSString* gkjn = [NSString stringWithCString:second];
-	
-	NSNumber* distance = [self calculateDistanceBetween:wjbf and:gkjn];
-	
-	printf("distance (%s,%s) = %i", first, second, [distance intValue]);
+	printf("distance (%s,%s) = %i", c_a, c_b, [distance intValue]);
 }
 
 @end

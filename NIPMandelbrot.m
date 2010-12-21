@@ -12,10 +12,10 @@
 
 +(void)createSetWithWidth:(int)width Height:(int)height Thing:(void(^)(int, int, int, int))thing
 {
-	double xmin = -1;
-	double xmax = 0;
-	double ymin = -1;
-	double ymax = 0;
+	double xmin = -2;
+	double xmax = 2;
+	double ymin = -2;
+	double ymax = 2;
 
 	for (int i = 0; i < width; ++i)
 		for (int j = 0; j < height; ++j)
@@ -42,15 +42,15 @@
 
 +(void)test
 {
-   printf("MANDELBROT\n");
+	printf("MANDELBROT (algorithm)\n");
 
-	int imageWidth = 640;
-	int imageHeight = 960;
-   NSString *filename = @"/Users/michael/Code/ObjectiveAlgorithms/temp.tiff";
+	int width = [Helpers getIntWithPrompt:@"width (640 is good)"];
+	int height = [Helpers getIntWithPrompt:@"height (960 is good)"];
+	NSString *filename = [Helpers getStringWithPrompt:@"filename (will automatically append .tiff for you)"];
 	
 	NSBitmapImageRep* image = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:NULL
-																	  pixelsWide:imageWidth 
-																	  pixelsHigh:imageHeight
+																	  pixelsWide:width
+																	  pixelsHigh:height
 																   bitsPerSample:8
 																 samplesPerPixel:4
 																		hasAlpha:YES
@@ -72,10 +72,10 @@
 		[image setColor:color atX:x y:y];
 	};
 	
-	[NIPMandelbrot createSetWithWidth:imageWidth Height:imageHeight Thing:mandlebrot_point_calculated];
+	[NIPMandelbrot createSetWithWidth:width Height:height Thing:mandlebrot_point_calculated];
 	
 	NSData* TIFFData = [image TIFFRepresentation];
-	[TIFFData writeToFile:filename atomically:YES];
+	[TIFFData writeToFile:[filename stringByAppendingString:@".tiff"] atomically:YES];
 }
 
 @end

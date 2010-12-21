@@ -29,13 +29,11 @@
 
 +(void)test
 {
-	printf("FISHER YATES SHUFFLE\n");
-	printf("enter some words to shuffle (separated with pipe symbol): ");
+	printf("FISHER YATES SHUFFLE (algorithm)\n");
+
+	NSString *input = [Helpers getStringWithPrompt:@"enter some words to shuffle (separated with pipe symbol)"];
 	
-	char buffer[256];
-	scanf("%256s", buffer);
-	
-	NSArray* words = [[NSString stringWithUTF8String:buffer] componentsSeparatedByString:@"|"];
+	NSArray* words = [input componentsSeparatedByString:@"|"];
 	
 	NSArray* shuffled = [NIPFisherYatesShuffle shuffleData:words];
 	

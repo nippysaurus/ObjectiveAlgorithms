@@ -44,11 +44,9 @@
 
 +(void)test
 {
-	printf("INSERTION SORT\n");
-	printf("enter a couple of words to sort (on a single line with pipes between): ");
-	
-	char buffer[256];
-	scanf("%256s", buffer);
+	printf("INSERTION SORT (algorithm)\n");
+
+	NSString *input = [Helpers getStringWithPrompt:@"enter a couple of words to sort (on a single line with pipes between)"];
 	
 	NSComparisonResult (^compare)(id, id) = ^NSComparisonResult(id a, id b)
 	{
@@ -57,7 +55,7 @@
 		return [a caseInsensitiveCompare:b];
 	};
 
-	NSArray* words = [[NSString stringWithUTF8String:buffer] componentsSeparatedByString:@"|"];
+	NSArray* words = [input componentsSeparatedByString:@"|"];
 	
 	NSArray* sorted = [NIPInsertionSort sortItems:words usingComparator:compare];
 

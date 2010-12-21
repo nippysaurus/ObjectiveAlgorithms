@@ -5,6 +5,7 @@
 #import "NIPMandelbrot.h"
 #import "NIPInsertionSort.h"
 #import "NIPBogoSort.h"
+#import "Sorting.h"
 
 //
 // LINKS:
@@ -23,44 +24,47 @@ int main (int argc, const char * argv[])
 
 	printf("This is a tester application which allows you to drive each of the algorithms from the command line. I have also included some functionality which might be useful to someone who does not know which sorting algorithm to use. Please make your selection from the menu items below.\n\n");
 	
-	printf("HELPERS\n\n");
-	printf(" [1] Sorting Algorithms\n");
-
+	printf("ALGORITHMS\n\n");
+	printf(" [1] Levenshtein Distance\n");
+	printf(" [2] Bubble Sort\n");
+	printf(" [3] Fisher Yates Shuffle\n");
+	printf(" [4] Mandelbrot Set\n");
+	printf(" [5] Insertion Sort\n");
+	printf(" [6] Bogo Sort\n");
+	
 	printf("\n");
 	
-	printf("ALGORITHMS\n\n");
-	printf(" [2] Levenshtein Distance\n");
-	printf(" [3] Bubble Sort\n");
-	printf(" [4] Fisher Yates Shuffle\n");
-	printf(" [5] Mandelbrot Set\n");
-	printf(" [6] Insertion Sort\n");
-	printf(" [7] Bogo Sort\n");
-	
-	int choice;
-	scanf("%d", &choice);
+	printf("HELPERS\n\n");
+	printf(" [7] Sorting Algorithms\n");
 
+	printf("\nmenu choice:");
+	
+	int choice = [Helpers getInt];
+	
+	printf("\n");
+	
 	switch (choice)
 	{
 		case 1:
-			// TODO create a function for this space. i'm not even sure where the code will be.
-			break;
-		case 2:
 			[NIPLevenshteinDistance test];
 			break;
-		case 3:
+		case 2:
 			[NIPBubbleSort test];
 			break;
-		case 4:
+		case 3:
 			[NIPFisherYatesShuffle test];
 			break;
-		case 5:
+		case 4:
 			[NIPMandelbrot test];
 			break;
-		case 6:
+		case 5:
 			[NIPInsertionSort test];
 			break;
-		case 7:
+		case 6:
 			[NIPBogoSort test];
+			break;
+		case 7:
+			[Sorting bla];
 			break;
 		default:
 			// if the user makes an invlaid sepection, write a warning
